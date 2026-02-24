@@ -1,0 +1,9 @@
+# DtoTenantBillingUsage
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `Subscriptions`                                                                                           | [][components.DtoSubscriptionResponse](../../models/components/dtosubscriptionresponse.md)                | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |
+| `Usage`                                                                                                   | [*components.DtoCustomerUsageSummaryResponse](../../models/components/dtocustomerusagesummaryresponse.md) | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |

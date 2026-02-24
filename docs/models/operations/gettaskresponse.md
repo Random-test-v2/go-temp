@@ -1,0 +1,9 @@
+# GetTaskResponse
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)        | :heavy_check_mark:                                                        | N/A                                                                       |
+| `DtoTaskResponse`                                                         | [*components.DtoTaskResponse](../../models/components/dtotaskresponse.md) | :heavy_minus_sign:                                                        | OK                                                                        |

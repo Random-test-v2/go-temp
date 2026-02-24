@@ -1,0 +1,10 @@
+# DtoAggregatedFeature
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `Entitlement`                                                                               | [*components.DtoAggregatedEntitlement](../../models/components/dtoaggregatedentitlement.md) | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `Feature`                                                                                   | [*components.DtoFeatureResponse](../../models/components/dtofeatureresponse.md)             | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `Sources`                                                                                   | [][components.DtoEntitlementSource](../../models/components/dtoentitlementsource.md)        | :heavy_minus_sign:                                                                          | N/A                                                                                         |

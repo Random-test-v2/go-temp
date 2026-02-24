@@ -1,0 +1,9 @@
+# ResumeSubscriptionRequest
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                               | *string*                                                                                           | :heavy_check_mark:                                                                                 | Subscription ID                                                                                    |
+| `Body`                                                                                             | [components.DtoResumeSubscriptionRequest](../../models/components/dtoresumesubscriptionrequest.md) | :heavy_check_mark:                                                                                 | Resume subscription request                                                                        |

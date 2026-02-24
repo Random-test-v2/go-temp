@@ -1,0 +1,13 @@
+# DtoUpdateWalletRequest
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `AlertSettings`                                                                 | [*components.TypesAlertSettings](../../models/components/typesalertsettings.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `AutoTopup`                                                                     | [*components.TypesAutoTopup](../../models/components/typesautotopup.md)         | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `Config`                                                                        | [*components.TypesWalletConfig](../../models/components/typeswalletconfig.md)   | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `Description`                                                                   | **string*                                                                       | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `Metadata`                                                                      | map[string]*string*                                                             | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `Name`                                                                          | **string*                                                                       | :heavy_minus_sign:                                                              | N/A                                                                             |

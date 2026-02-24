@@ -1,0 +1,9 @@
+# GetCustomerEntitlementsResponse
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                        | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
+| `DtoCustomerEntitlementsResponse`                                                                         | [*components.DtoCustomerEntitlementsResponse](../../models/components/dtocustomerentitlementsresponse.md) | :heavy_minus_sign:                                                                                        | OK                                                                                                        |

@@ -1,0 +1,11 @@
+# TypesAlertSettings
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `AlertEnabled`                                                                    | **bool*                                                                           | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `Critical`                                                                        | [*components.TypesAlertThreshold](../../models/components/typesalertthreshold.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `Info`                                                                            | [*components.TypesAlertThreshold](../../models/components/typesalertthreshold.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `Warning`                                                                         | [*components.TypesAlertThreshold](../../models/components/typesalertthreshold.md) | :heavy_minus_sign:                                                                | N/A                                                                               |

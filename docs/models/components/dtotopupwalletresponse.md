@@ -1,0 +1,10 @@
+# DtoTopUpWalletResponse
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `InvoiceID`                                                                                         | **string*                                                                                           | :heavy_minus_sign:                                                                                  | Invoice ID if an invoice was created (only for PURCHASED_CREDIT_INVOICED)                           |
+| `Wallet`                                                                                            | [*components.DtoWalletResponse](../../models/components/dtowalletresponse.md)                       | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `WalletTransaction`                                                                                 | [*components.DtoWalletTransactionResponse](../../models/components/dtowallettransactionresponse.md) | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |

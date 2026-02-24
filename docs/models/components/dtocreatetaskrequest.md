@@ -1,0 +1,13 @@
+# DtoCreateTaskRequest
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `EntityType`                                                             | [components.TypesEntityType](../../models/components/typesentitytype.md) | :heavy_check_mark:                                                       | N/A                                                                      |
+| `FileName`                                                               | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `FileType`                                                               | [components.TypesFileType](../../models/components/typesfiletype.md)     | :heavy_check_mark:                                                       | N/A                                                                      |
+| `FileURL`                                                                | *string*                                                                 | :heavy_check_mark:                                                       | N/A                                                                      |
+| `Metadata`                                                               | map[string]*any*                                                         | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `TaskType`                                                               | [components.TypesTaskType](../../models/components/typestasktype.md)     | :heavy_check_mark:                                                       | N/A                                                                      |

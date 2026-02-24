@@ -1,0 +1,9 @@
+# ActivateSubscriptionRequest
+
+
+## Fields
+
+| Field                                                                                                            | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                                             | *string*                                                                                                         | :heavy_check_mark:                                                                                               | Subscription ID                                                                                                  |
+| `Body`                                                                                                           | [components.DtoActivateDraftSubscriptionRequest](../../models/components/dtoactivatedraftsubscriptionrequest.md) | :heavy_check_mark:                                                                                               | Activate Draft Subscription Request                                                                              |

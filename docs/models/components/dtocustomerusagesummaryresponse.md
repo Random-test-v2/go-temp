@@ -1,0 +1,11 @@
+# DtoCustomerUsageSummaryResponse
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `CustomerID`                                                                              | **string*                                                                                 | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `Features`                                                                                | [][components.DtoFeatureUsageSummary](../../models/components/dtofeatureusagesummary.md)  | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `Pagination`                                                                              | [*components.TypesPaginationResponse](../../models/components/typespaginationresponse.md) | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `Period`                                                                                  | [*components.DtoBillingPeriodInfo](../../models/components/dtobillingperiodinfo.md)       | :heavy_minus_sign:                                                                        | N/A                                                                                       |

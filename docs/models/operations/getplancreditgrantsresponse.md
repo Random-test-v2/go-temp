@@ -1,0 +1,9 @@
+# GetPlanCreditGrantsResponse
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                | :heavy_check_mark:                                                                                | N/A                                                                                               |
+| `DtoListCreditGrantsResponse`                                                                     | [*components.DtoListCreditGrantsResponse](../../models/components/dtolistcreditgrantsresponse.md) | :heavy_minus_sign:                                                                                | OK                                                                                                |

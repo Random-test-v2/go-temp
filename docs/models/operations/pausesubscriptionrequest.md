@@ -1,0 +1,9 @@
+# PauseSubscriptionRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ID`                                                                                             | *string*                                                                                         | :heavy_check_mark:                                                                               | Subscription ID                                                                                  |
+| `Body`                                                                                           | [components.DtoPauseSubscriptionRequest](../../models/components/dtopausesubscriptionrequest.md) | :heavy_check_mark:                                                                               | Pause subscription request                                                                       |

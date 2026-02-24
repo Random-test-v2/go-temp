@@ -1,0 +1,11 @@
+# DtoGetUsageResponse
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `EventName`                                                                         | **string*                                                                           | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `Results`                                                                           | [][components.DtoUsageResult](../../models/components/dtousageresult.md)            | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `Type`                                                                              | [*components.TypesAggregationType](../../models/components/typesaggregationtype.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `Value`                                                                             | **float64*                                                                          | :heavy_minus_sign:                                                                  | N/A                                                                                 |
