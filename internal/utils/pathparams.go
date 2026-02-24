@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"undefined/optionalnullable"
-	"undefined/types"
+	"github.com/flexprice/flexprice-go/optionalnullable"
+	"github.com/flexprice/flexprice-go/types"
 )
 
 func GenerateURL(_ context.Context, serverURL, path string, pathParams interface{}, globals interface{}) (string, error) {

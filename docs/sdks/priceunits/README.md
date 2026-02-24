@@ -24,17 +24,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/operations"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.PriceUnits.ListPriceUnits(ctx, operations.ListPriceUnitsRequest{})
@@ -79,17 +79,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.PriceUnits.CreatePriceUnit(ctx, components.DtoCreatePriceUnitRequest{
@@ -140,16 +140,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.PriceUnits.GetPriceUnitByCode(ctx, "<value>")
@@ -194,17 +194,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.PriceUnits.QueryPriceUnit(ctx, components.TypesPriceUnitFilter{})
@@ -249,16 +249,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.PriceUnits.GetPriceUnit(ctx, "<id>")
@@ -302,17 +302,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.PriceUnits.UpdatePriceUnit(ctx, "<id>", components.DtoUpdatePriceUnitRequest{})
@@ -357,16 +357,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.PriceUnits.DeletePriceUnit(ctx, "<id>")

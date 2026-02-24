@@ -4,9 +4,9 @@ package config
 
 import (
 	"context"
+	"github.com/flexprice/flexprice-go/retry"
 	"net/http"
 	"time"
-	"undefined/retry"
 )
 
 type HTTPClient interface {

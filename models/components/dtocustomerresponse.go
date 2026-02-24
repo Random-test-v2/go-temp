@@ -3,7 +3,7 @@
 package components
 
 import (
-	"undefined/internal/utils"
+	"github.com/flexprice/flexprice-go/internal/utils"
 )
 
 // DtoCustomerResponse - Customer response object containing all customer information

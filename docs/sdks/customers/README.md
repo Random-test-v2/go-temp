@@ -26,17 +26,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Customers.UpdateCustomer(ctx, components.DtoUpdateCustomerRequest{}, nil, nil)
@@ -83,17 +83,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Customers.CreateCustomer(ctx, components.DtoCreateCustomerRequest{
@@ -140,16 +140,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Customers.GetCustomerByExternalID(ctx, "<id>")
@@ -194,17 +194,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Customers.QueryCustomer(ctx, components.TypesCustomerFilter{})
@@ -249,17 +249,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/operations"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Customers.GetCustomerUsageSummary(ctx, operations.GetCustomerUsageSummaryRequest{})
@@ -304,16 +304,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Customers.GetCustomer(ctx, "<id>")
@@ -358,16 +358,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Customers.DeleteCustomer(ctx, "<id>")
@@ -412,16 +412,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Customers.GetCustomerEntitlements(ctx, "<id>")
@@ -466,16 +466,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Customers.GetCustomerUpcomingGrants(ctx, "<id>")

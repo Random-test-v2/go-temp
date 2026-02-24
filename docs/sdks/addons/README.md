@@ -23,17 +23,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Addons.CreateAddon(ctx, components.DtoCreateAddonRequest{
@@ -82,16 +82,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Addons.GetAddonByLookupKey(ctx, "<value>")
@@ -136,17 +136,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Addons.QueryAddon(ctx, components.TypesAddonFilter{})
@@ -191,16 +191,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Addons.GetAddon(ctx, "<id>")
@@ -245,17 +245,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Addons.UpdateAddon(ctx, "<id>", components.DtoUpdateAddonRequest{})
@@ -301,16 +301,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Addons.DeleteAddon(ctx, "<id>")

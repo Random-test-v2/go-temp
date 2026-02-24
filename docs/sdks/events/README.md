@@ -25,30 +25,30 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Events.IngestEvent(ctx, components.DtoIngestEventRequest{
-        CustomerID: undefined.Pointer("customer456"),
-        EventID: undefined.Pointer("event123"),
+        CustomerID: flexprice.Pointer("customer456"),
+        EventID: flexprice.Pointer("event123"),
         EventName: "api_request",
         ExternalCustomerID: "customer456",
         Properties: map[string]string{
             ""response_status"": "200}",
             "{"request_size"": "100",
         },
-        Source: undefined.Pointer("api"),
-        Timestamp: undefined.Pointer("2024-03-20T15:04:05Z"),
+        Source: flexprice.Pointer("api"),
+        Timestamp: flexprice.Pointer("2024-03-20T15:04:05Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -91,17 +91,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Events.GetUsageAnalytics(ctx, components.DtoGetUsageAnalyticsRequest{
@@ -148,17 +148,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Events.IngestEventsBulk(ctx, components.DtoBulkIngestEventRequest{
@@ -205,16 +205,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Events.GetHuggingfaceInferenceData(ctx)
@@ -257,24 +257,24 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Events.ListRawEvents(ctx, components.DtoGetEventsRequest{
-        EndTime: undefined.Pointer("2024-12-09T00:00:00Z"),
-        Order: undefined.Pointer("desc"),
-        Sort: undefined.Pointer("timestamp"),
-        StartTime: undefined.Pointer("2024-11-09T00:00:00Z"),
+        EndTime: flexprice.Pointer("2024-12-09T00:00:00Z"),
+        Order: flexprice.Pointer("desc"),
+        Sort: flexprice.Pointer("timestamp"),
+        StartTime: flexprice.Pointer("2024-11-09T00:00:00Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -317,28 +317,28 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Events.GetUsageStatistics(ctx, components.DtoGetUsageRequest{
         AggregationType: components.TypesAggregationTypeCountUnique,
-        BillingAnchor: undefined.Pointer("2024-03-05T14:30:45.123456789Z"),
-        CustomerID: undefined.Pointer("customer456"),
-        EndTime: undefined.Pointer("2024-03-20T00:00:00Z"),
+        BillingAnchor: flexprice.Pointer("2024-03-05T14:30:45.123456789Z"),
+        CustomerID: flexprice.Pointer("customer456"),
+        EndTime: flexprice.Pointer("2024-03-20T00:00:00Z"),
         EventName: "api_request",
-        ExternalCustomerID: undefined.Pointer("customer456"),
-        PropertyName: undefined.Pointer("request_size"),
-        StartTime: undefined.Pointer("2024-03-13T00:00:00Z"),
+        ExternalCustomerID: flexprice.Pointer("customer456"),
+        PropertyName: flexprice.Pointer("request_size"),
+        StartTime: flexprice.Pointer("2024-03-13T00:00:00Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -381,26 +381,26 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Events.GetUsageByMeter(ctx, components.DtoGetUsageByMeterRequest{
-        BillingAnchor: undefined.Pointer("2024-03-05T14:30:45Z"),
-        CustomerID: undefined.Pointer("customer456"),
-        EndTime: undefined.Pointer("2024-12-09T00:00:00Z"),
-        ExternalCustomerID: undefined.Pointer("user_5"),
+        BillingAnchor: flexprice.Pointer("2024-03-05T14:30:45Z"),
+        CustomerID: flexprice.Pointer("customer456"),
+        EndTime: flexprice.Pointer("2024-12-09T00:00:00Z"),
+        ExternalCustomerID: flexprice.Pointer("user_5"),
         MeterID: "123",
-        StartTime: undefined.Pointer("2024-11-09T00:00:00Z"),
+        StartTime: flexprice.Pointer("2024-11-09T00:00:00Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -443,16 +443,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	flexprice "github.com/flexprice/flexprice-go"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
+    s := flexprice.New(
         "https://api.example.com",
-        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Events.GetEvent(ctx, "<id>")

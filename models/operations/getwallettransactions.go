@@ -5,8 +5,8 @@ package operations
 import (
 	"encoding/json"
 	"fmt"
-	"undefined/internal/utils"
-	"undefined/models/components"
+	"github.com/flexprice/flexprice-go/internal/utils"
+	"github.com/flexprice/flexprice-go/models/components"
 )
 
 type GetWalletTransactionsOrder string

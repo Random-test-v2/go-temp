@@ -38,7 +38,7 @@ Flexprice API: Flexprice API provides billing, metering, and subscription manage
 
 To add the SDK as a dependency to your project:
 ```bash
-go get undefined
+go get github.com/flexprice/flexprice-go
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -52,17 +52,17 @@ package main
 
 import (
 	"context"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
-	"undefined"
-	"undefined/models/components"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := undefined.New(
+	s := flexprice.New(
 		"https://api.example.com",
-		undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+		flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	res, err := s.Addons.CreateAddon(ctx, components.DtoCreateAddonRequest{
@@ -98,17 +98,17 @@ package main
 
 import (
 	"context"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
-	"undefined"
-	"undefined/models/components"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := undefined.New(
+	s := flexprice.New(
 		"https://api.example.com",
-		undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+		flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	res, err := s.Addons.CreateAddon(ctx, components.DtoCreateAddonRequest{
@@ -428,19 +428,19 @@ package main
 
 import (
 	"context"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
+	"github.com/flexprice/flexprice-go/retry"
 	"log"
 	"models/operations"
-	"undefined"
-	"undefined/models/components"
-	"undefined/retry"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := undefined.New(
+	s := flexprice.New(
 		"https://api.example.com",
-		undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+		flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	res, err := s.Addons.CreateAddon(ctx, components.DtoCreateAddonRequest{
@@ -474,18 +474,18 @@ package main
 
 import (
 	"context"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/components"
+	"github.com/flexprice/flexprice-go/retry"
 	"log"
-	"undefined"
-	"undefined/models/components"
-	"undefined/retry"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := undefined.New(
+	s := flexprice.New(
 		"https://api.example.com",
-		undefined.WithRetryConfig(
+		flexprice.WithRetryConfig(
 			retry.Config{
 				Strategy: "backoff",
 				Backoff: &retry.BackoffStrategy{
@@ -496,7 +496,7 @@ func main() {
 				},
 				RetryConnectionErrors: false,
 			}),
-		undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+		flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	res, err := s.Addons.CreateAddon(ctx, components.DtoCreateAddonRequest{
@@ -538,18 +538,18 @@ package main
 import (
 	"context"
 	"errors"
+	flexprice "github.com/flexprice/flexprice-go"
+	"github.com/flexprice/flexprice-go/models/apierrors"
+	"github.com/flexprice/flexprice-go/models/components"
 	"log"
-	"undefined"
-	"undefined/models/apierrors"
-	"undefined/models/components"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := undefined.New(
+	s := flexprice.New(
 		"https://api.example.com",
-		undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+		flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	res, err := s.Addons.CreateAddon(ctx, components.DtoCreateAddonRequest{
@@ -600,12 +600,12 @@ import (
 	"net/http"
 	"time"
 
-	"undefined"
+	"github.com/flexprice/flexprice-go"
 )
 
 var (
 	httpClient = &http.Client{Timeout: 30 * time.Second}
-	sdkClient  = undefined.New(undefined.WithClient(httpClient))
+	sdkClient  = flexprice.New(flexprice.WithClient(httpClient))
 )
 ```
 

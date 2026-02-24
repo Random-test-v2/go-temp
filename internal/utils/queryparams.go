@@ -12,8 +12,8 @@ import (
 	"reflect"
 	"time"
 
-	"undefined/optionalnullable"
-	"undefined/types"
+	"github.com/flexprice/flexprice-go/optionalnullable"
+	"github.com/flexprice/flexprice-go/types"
 )
 
 func PopulateQueryParams(_ context.Context, req *http.Request, queryParams interface{}, globals interface{}, allowEmptyValue map[string]struct{}) error {

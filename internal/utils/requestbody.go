@@ -15,7 +15,7 @@ import (
 	"reflect"
 	"regexp"
 
-	"undefined/optionalnullable"
+	"github.com/flexprice/flexprice-go/optionalnullable"
 )
 
 const (
