@@ -7,7 +7,7 @@ import (
 )
 
 type DtoInvoiceLineItemResponse struct {
-	Amount         *float64             `json:"amount,omitzero"`
+	Amount         *string              `json:"amount,omitzero"`
 	CommitmentInfo *TypesCommitmentInfo `json:"commitment_info,omitzero"`
 	CreatedAt      *string              `json:"created_at,omitzero"`
 	CreatedBy      *string              `json:"created_by,omitzero"`
@@ -20,9 +20,9 @@ type DtoInvoiceLineItemResponse struct {
 	ID             *string              `json:"id,omitzero"`
 	InvoiceID      *string              `json:"invoice_id,omitzero"`
 	// invoice_level_discount is the discount amount in invoice currency applied to all line items on the invoice.
-	InvoiceLevelDiscount *float64 `json:"invoice_level_discount,omitzero"`
+	InvoiceLevelDiscount *string `json:"invoice_level_discount,omitzero"`
 	// line_item_discount is the discount amount in invoice currency applied directly to this line item.
-	LineItemDiscount *float64          `json:"line_item_discount,omitzero"`
+	LineItemDiscount *string           `json:"line_item_discount,omitzero"`
 	Metadata         map[string]string `json:"metadata,omitzero"`
 	MeterDisplayName *string           `json:"meter_display_name,omitzero"`
 	MeterID          *string           `json:"meter_id,omitzero"`
@@ -30,13 +30,13 @@ type DtoInvoiceLineItemResponse struct {
 	PeriodStart      *string           `json:"period_start,omitzero"`
 	PlanDisplayName  *string           `json:"plan_display_name,omitzero"`
 	// prepaid_credits_applied is the amount in invoice currency reduced from this line item due to prepaid credits application.
-	PrepaidCreditsApplied *float64     `json:"prepaid_credits_applied,omitzero"`
+	PrepaidCreditsApplied *string      `json:"prepaid_credits_applied,omitzero"`
 	PriceID               *string      `json:"price_id,omitzero"`
 	PriceType             *string      `json:"price_type,omitzero"`
 	PriceUnit             *string      `json:"price_unit,omitzero"`
-	PriceUnitAmount       *float64     `json:"price_unit_amount,omitzero"`
+	PriceUnitAmount       *string      `json:"price_unit_amount,omitzero"`
 	PriceUnitID           *string      `json:"price_unit_id,omitzero"`
-	Quantity              *float64     `json:"quantity,omitzero"`
+	Quantity              *string      `json:"quantity,omitzero"`
 	Status                *TypesStatus `json:"status,omitzero"`
 	SubscriptionID        *string      `json:"subscription_id,omitzero"`
 	TenantID              *string      `json:"tenant_id,omitzero"`
@@ -59,7 +59,7 @@ func (d *DtoInvoiceLineItemResponse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (d *DtoInvoiceLineItemResponse) GetAmount() *float64 {
+func (d *DtoInvoiceLineItemResponse) GetAmount() *string {
 	if d == nil {
 		return nil
 	}
@@ -143,14 +143,14 @@ func (d *DtoInvoiceLineItemResponse) GetInvoiceID() *string {
 	return d.InvoiceID
 }
 
-func (d *DtoInvoiceLineItemResponse) GetInvoiceLevelDiscount() *float64 {
+func (d *DtoInvoiceLineItemResponse) GetInvoiceLevelDiscount() *string {
 	if d == nil {
 		return nil
 	}
 	return d.InvoiceLevelDiscount
 }
 
-func (d *DtoInvoiceLineItemResponse) GetLineItemDiscount() *float64 {
+func (d *DtoInvoiceLineItemResponse) GetLineItemDiscount() *string {
 	if d == nil {
 		return nil
 	}
@@ -199,7 +199,7 @@ func (d *DtoInvoiceLineItemResponse) GetPlanDisplayName() *string {
 	return d.PlanDisplayName
 }
 
-func (d *DtoInvoiceLineItemResponse) GetPrepaidCreditsApplied() *float64 {
+func (d *DtoInvoiceLineItemResponse) GetPrepaidCreditsApplied() *string {
 	if d == nil {
 		return nil
 	}
@@ -227,7 +227,7 @@ func (d *DtoInvoiceLineItemResponse) GetPriceUnit() *string {
 	return d.PriceUnit
 }
 
-func (d *DtoInvoiceLineItemResponse) GetPriceUnitAmount() *float64 {
+func (d *DtoInvoiceLineItemResponse) GetPriceUnitAmount() *string {
 	if d == nil {
 		return nil
 	}
@@ -241,7 +241,7 @@ func (d *DtoInvoiceLineItemResponse) GetPriceUnitID() *string {
 	return d.PriceUnitID
 }
 
-func (d *DtoInvoiceLineItemResponse) GetQuantity() *float64 {
+func (d *DtoInvoiceLineItemResponse) GetQuantity() *string {
 	if d == nil {
 		return nil
 	}

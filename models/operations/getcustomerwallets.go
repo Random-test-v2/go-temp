@@ -8,6 +8,8 @@ import (
 )
 
 type GetCustomerWalletsRequest struct {
+	// populated from x-max-live header, not query param
+	Minus                  *int64  `queryParam:"style=form,explode=true,name=-"`
 	Expand                 *string `queryParam:"style=form,explode=true,name=expand"`
 	FromCache              *bool   `default:"false" queryParam:"style=form,explode=true,name=from_cache"`
 	ID                     *string `queryParam:"style=form,explode=true,name=id"`
@@ -24,6 +26,13 @@ func (g *GetCustomerWalletsRequest) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (g *GetCustomerWalletsRequest) GetMinus() *int64 {
+	if g == nil {
+		return nil
+	}
+	return g.Minus
 }
 
 func (g *GetCustomerWalletsRequest) GetExpand() *string {

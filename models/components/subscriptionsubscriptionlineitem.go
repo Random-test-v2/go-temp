@@ -11,10 +11,10 @@ type SubscriptionSubscriptionLineItem struct {
 	// from price at create; default 1
 	BillingPeriodCount *int64 `json:"billing_period_count,omitzero"`
 	// Commitment fields
-	CommitmentAmount        *float64                             `json:"commitment_amount,omitzero"`
+	CommitmentAmount        *string                              `json:"commitment_amount,omitzero"`
 	CommitmentDuration      *TypesBillingPeriod                  `json:"commitment_duration,omitzero"`
-	CommitmentOverageFactor *float64                             `json:"commitment_overage_factor,omitzero"`
-	CommitmentQuantity      *float64                             `json:"commitment_quantity,omitzero"`
+	CommitmentOverageFactor *string                              `json:"commitment_overage_factor,omitzero"`
+	CommitmentQuantity      *string                              `json:"commitment_quantity,omitzero"`
 	CommitmentTrueUpEnabled *bool                                `json:"commitment_true_up_enabled,omitzero"`
 	CommitmentType          *TypesCommitmentType                 `json:"commitment_type,omitzero"`
 	CommitmentWindowed      *bool                                `json:"commitment_windowed,omitzero"`
@@ -74,7 +74,7 @@ func (s *SubscriptionSubscriptionLineItem) GetBillingPeriodCount() *int64 {
 	return s.BillingPeriodCount
 }
 
-func (s *SubscriptionSubscriptionLineItem) GetCommitmentAmount() *float64 {
+func (s *SubscriptionSubscriptionLineItem) GetCommitmentAmount() *string {
 	if s == nil {
 		return nil
 	}
@@ -88,14 +88,14 @@ func (s *SubscriptionSubscriptionLineItem) GetCommitmentDuration() *TypesBilling
 	return s.CommitmentDuration
 }
 
-func (s *SubscriptionSubscriptionLineItem) GetCommitmentOverageFactor() *float64 {
+func (s *SubscriptionSubscriptionLineItem) GetCommitmentOverageFactor() *string {
 	if s == nil {
 		return nil
 	}
 	return s.CommitmentOverageFactor
 }
 
-func (s *SubscriptionSubscriptionLineItem) GetCommitmentQuantity() *float64 {
+func (s *SubscriptionSubscriptionLineItem) GetCommitmentQuantity() *string {
 	if s == nil {
 		return nil
 	}

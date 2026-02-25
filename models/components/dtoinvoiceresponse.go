@@ -9,13 +9,13 @@ import (
 type DtoInvoiceResponse struct {
 	// adjustment_amount is the total sum of credit notes of type "adjustment".
 	// These are non-cash reductions applied to the invoice (e.g. goodwill credit, billing correction).
-	AdjustmentAmount *float64 `json:"adjustment_amount,omitzero"`
+	AdjustmentAmount *string `json:"adjustment_amount,omitzero"`
 	// amount_due is the total amount that needs to be paid for this invoice
-	AmountDue *float64 `json:"amount_due,omitzero"`
+	AmountDue *string `json:"amount_due,omitzero"`
 	// amount_paid is the amount that has already been paid towards this invoice
-	AmountPaid *float64 `json:"amount_paid,omitzero"`
+	AmountPaid *string `json:"amount_paid,omitzero"`
 	// amount_remaining is the outstanding amount still owed on this invoice (calculated as amount_due minus amount_paid)
-	AmountRemaining *float64 `json:"amount_remaining,omitzero"`
+	AmountRemaining *string `json:"amount_remaining,omitzero"`
 	// billing_period describes the billing period this invoice covers (e.g., "January 2024", "Q1 2024")
 	BillingPeriod *string `json:"billing_period,omitzero"`
 	// billing_reason indicates why this invoice was generated (e.g., "subscription_billing", "manual_charge")
@@ -64,26 +64,26 @@ type DtoInvoiceResponse struct {
 	PeriodStart *string `json:"period_start,omitzero"`
 	// refunded_amount is the total sum of credit notes of type "refund".
 	// These are actual refunds issued to the customer.
-	RefundedAmount *float64                 `json:"refunded_amount,omitzero"`
+	RefundedAmount *string                  `json:"refunded_amount,omitzero"`
 	Status         *TypesStatus             `json:"status,omitzero"`
 	Subscription   *DtoSubscriptionResponse `json:"subscription,omitzero"`
 	// subscription_id is the ID of the subscription this invoice is associated with (only present for subscription-based invoices)
 	SubscriptionID *string `json:"subscription_id,omitzero"`
 	// subtotal is the sum of all line items before any taxes, discounts, or additional fees
-	Subtotal *float64 `json:"subtotal,omitzero"`
+	Subtotal *string `json:"subtotal,omitzero"`
 	// tax_applied_records contains the tax applied records associated with this invoice
 	Taxes    []DtoTaxAppliedResponse `json:"taxes,omitzero"`
 	TenantID *string                 `json:"tenant_id,omitzero"`
 	// total is the final amount including taxes, fees, and discounts
-	Total *float64 `json:"total,omitzero"`
+	Total *string `json:"total,omitzero"`
 	// total_discount is the sum of all coupon discounts applied to the invoice
-	TotalDiscount *float64 `json:"total_discount,omitzero"`
+	TotalDiscount *string `json:"total_discount,omitzero"`
 	// total_prepaid_credits_applied is the total amount of prepaid credits applied to this invoice.
-	TotalPrepaidCreditsApplied *float64 `json:"total_prepaid_credits_applied,omitzero"`
+	TotalPrepaidCreditsApplied *string `json:"total_prepaid_credits_applied,omitzero"`
 	// total_tax is the sum of all taxes combined at the invoice level.
-	TotalTax  *float64 `json:"total_tax,omitzero"`
-	UpdatedAt *string  `json:"updated_at,omitzero"`
-	UpdatedBy *string  `json:"updated_by,omitzero"`
+	TotalTax  *string `json:"total_tax,omitzero"`
+	UpdatedAt *string `json:"updated_at,omitzero"`
+	UpdatedBy *string `json:"updated_by,omitzero"`
 	// version is the version number for tracking changes to this invoice
 	Version *int64 `json:"version,omitzero"`
 	// voided_at is the timestamp when this invoice was voided or cancelled
@@ -101,28 +101,28 @@ func (d *DtoInvoiceResponse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (d *DtoInvoiceResponse) GetAdjustmentAmount() *float64 {
+func (d *DtoInvoiceResponse) GetAdjustmentAmount() *string {
 	if d == nil {
 		return nil
 	}
 	return d.AdjustmentAmount
 }
 
-func (d *DtoInvoiceResponse) GetAmountDue() *float64 {
+func (d *DtoInvoiceResponse) GetAmountDue() *string {
 	if d == nil {
 		return nil
 	}
 	return d.AmountDue
 }
 
-func (d *DtoInvoiceResponse) GetAmountPaid() *float64 {
+func (d *DtoInvoiceResponse) GetAmountPaid() *string {
 	if d == nil {
 		return nil
 	}
 	return d.AmountPaid
 }
 
-func (d *DtoInvoiceResponse) GetAmountRemaining() *float64 {
+func (d *DtoInvoiceResponse) GetAmountRemaining() *string {
 	if d == nil {
 		return nil
 	}
@@ -311,7 +311,7 @@ func (d *DtoInvoiceResponse) GetPeriodStart() *string {
 	return d.PeriodStart
 }
 
-func (d *DtoInvoiceResponse) GetRefundedAmount() *float64 {
+func (d *DtoInvoiceResponse) GetRefundedAmount() *string {
 	if d == nil {
 		return nil
 	}
@@ -339,7 +339,7 @@ func (d *DtoInvoiceResponse) GetSubscriptionID() *string {
 	return d.SubscriptionID
 }
 
-func (d *DtoInvoiceResponse) GetSubtotal() *float64 {
+func (d *DtoInvoiceResponse) GetSubtotal() *string {
 	if d == nil {
 		return nil
 	}
@@ -360,28 +360,28 @@ func (d *DtoInvoiceResponse) GetTenantID() *string {
 	return d.TenantID
 }
 
-func (d *DtoInvoiceResponse) GetTotal() *float64 {
+func (d *DtoInvoiceResponse) GetTotal() *string {
 	if d == nil {
 		return nil
 	}
 	return d.Total
 }
 
-func (d *DtoInvoiceResponse) GetTotalDiscount() *float64 {
+func (d *DtoInvoiceResponse) GetTotalDiscount() *string {
 	if d == nil {
 		return nil
 	}
 	return d.TotalDiscount
 }
 
-func (d *DtoInvoiceResponse) GetTotalPrepaidCreditsApplied() *float64 {
+func (d *DtoInvoiceResponse) GetTotalPrepaidCreditsApplied() *string {
 	if d == nil {
 		return nil
 	}
 	return d.TotalPrepaidCreditsApplied
 }
 
-func (d *DtoInvoiceResponse) GetTotalTax() *float64 {
+func (d *DtoInvoiceResponse) GetTotalTax() *string {
 	if d == nil {
 		return nil
 	}

@@ -1,4 +1,4 @@
-# GetTenantResponse
+# GetTenantByIDResponse
 
 
 ## Fields

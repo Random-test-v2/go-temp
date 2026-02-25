@@ -7,43 +7,43 @@ import (
 	"github.com/flexprice/flexprice-go/models/components"
 )
 
-type GetTenantRequest struct {
+type GetTenantByIDRequest struct {
 	// Tenant ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (g *GetTenantRequest) GetID() string {
+func (g *GetTenantByIDRequest) GetID() string {
 	if g == nil {
 		return ""
 	}
 	return g.ID
 }
 
-type GetTenantResponse struct {
+type GetTenantByIDResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// Tenant details
 	DtoTenantResponse *components.DtoTenantResponse
 }
 
-func (g GetTenantResponse) MarshalJSON() ([]byte, error) {
+func (g GetTenantByIDResponse) MarshalJSON() ([]byte, error) {
 	return utils.MarshalJSON(g, "", false)
 }
 
-func (g *GetTenantResponse) UnmarshalJSON(data []byte) error {
+func (g *GetTenantByIDResponse) UnmarshalJSON(data []byte) error {
 	if err := utils.UnmarshalJSON(data, &g, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (g *GetTenantResponse) GetHTTPMeta() components.HTTPMetadata {
+func (g *GetTenantByIDResponse) GetHTTPMeta() components.HTTPMetadata {
 	if g == nil {
 		return components.HTTPMetadata{}
 	}
 	return g.HTTPMeta
 }
 
-func (g *GetTenantResponse) GetDtoTenantResponse() *components.DtoTenantResponse {
+func (g *GetTenantByIDResponse) GetDtoTenantResponse() *components.DtoTenantResponse {
 	if g == nil {
 		return nil
 	}
