@@ -3,8 +3,8 @@
 package components
 
 import (
-	"undefined/internal/utils"
-	"undefined/optionalnullable"
+	"github.com/flexprice/flexprice-go/internal/utils"
+	"github.com/flexprice/flexprice-go/optionalnullable"
 )
 
 type PricePrice struct {

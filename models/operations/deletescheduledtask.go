@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"undefined/models/components"
+	"github.com/flexprice/flexprice-go/models/components"
 )
 
 type DeleteScheduledTaskRequest struct {

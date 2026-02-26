@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"strings"
 
-	"undefined/optionalnullable"
+	"github.com/flexprice/flexprice-go/optionalnullable"
 )
 
 func PopulateHeaders(_ context.Context, req *http.Request, headers interface{}, globals interface{}) {

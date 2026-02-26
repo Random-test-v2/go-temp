@@ -3,8 +3,8 @@
 package operations
 
 import (
-	"undefined/internal/utils"
-	"undefined/models/components"
+	"github.com/flexprice/flexprice-go/internal/utils"
+	"github.com/flexprice/flexprice-go/models/components"
 )
 
 type GetWalletRequest struct {
