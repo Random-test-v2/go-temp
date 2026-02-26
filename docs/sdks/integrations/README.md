@@ -21,16 +21,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Integrations.GetIntegration(ctx, "<value>")
@@ -75,17 +75,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Integrations.CreateOrUpdateIntegration(ctx, "<value>", components.DtoCreateIntegrationRequest{
@@ -137,16 +137,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Integrations.ListLinkedIntegrations(ctx)
@@ -189,16 +189,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Integrations.DeleteIntegration(ctx, "<id>")

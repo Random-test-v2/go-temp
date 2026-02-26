@@ -4,7 +4,7 @@ package apierrors
 
 import (
 	"encoding/json"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined/models/components"
 )
 
 type ErrorsErrorResponse struct {

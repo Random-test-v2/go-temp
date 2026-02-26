@@ -42,17 +42,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.CreateSubscription(ctx, components.DtoCreateSubscriptionRequest{
@@ -102,17 +102,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.AddSubscriptionAddon(ctx, components.DtoAddAddonRequest{
@@ -160,17 +160,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.RemoveSubscriptionAddon(ctx, components.DtoRemoveAddonRequest{
@@ -217,17 +217,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.UpdateSubscriptionLineItem(ctx, "<id>", components.DtoUpdateSubscriptionLineItemRequest{})
@@ -273,17 +273,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.DeleteSubscriptionLineItem(ctx, "<id>", components.DtoDeleteSubscriptionLineItemRequest{})
@@ -329,17 +329,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.QuerySubscription(ctx, components.TypesSubscriptionFilter{})
@@ -384,23 +384,23 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.GetSubscriptionUsage(ctx, components.DtoGetUsageBySubscriptionRequest{
-        EndTime: flexprice.Pointer("2024-03-20T00:00:00Z"),
-        LifetimeUsage: flexprice.Pointer(false),
-        StartTime: flexprice.Pointer("2024-03-13T00:00:00Z"),
+        EndTime: undefined.Pointer("2024-03-20T00:00:00Z"),
+        LifetimeUsage: undefined.Pointer(false),
+        StartTime: undefined.Pointer("2024-03-13T00:00:00Z"),
         SubscriptionID: "123",
     })
     if err != nil {
@@ -444,16 +444,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.GetSubscription(ctx, "<id>")
@@ -498,17 +498,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.UpdateSubscription(ctx, "<id>", components.DtoUpdateSubscriptionRequest{})
@@ -554,17 +554,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.ActivateSubscription(ctx, "<id>", components.DtoActivateDraftSubscriptionRequest{
@@ -612,16 +612,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.GetSubscriptionAddonAssociations(ctx, "<id>")
@@ -666,17 +666,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.CancelSubscription(ctx, "<id>", components.DtoCancelSubscriptionRequest{
@@ -724,17 +724,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.ExecuteSubscriptionChange(ctx, "<id>", components.DtoSubscriptionChangeRequest{
@@ -786,17 +786,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.PreviewSubscriptionChange(ctx, "<id>", components.DtoSubscriptionChangeRequest{
@@ -848,16 +848,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.GetSubscriptionEntitlements(ctx, "<id>", nil)
@@ -903,16 +903,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.GetSubscriptionUpcomingGrants(ctx, "<id>")
@@ -957,17 +957,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.CreateSubscriptionLineItem(ctx, "<id>", components.DtoCreateSubscriptionLineItemRequest{})
@@ -1013,17 +1013,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.PauseSubscription(ctx, "<id>", components.DtoPauseSubscriptionRequest{
@@ -1071,16 +1071,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.ListSubscriptionPauses(ctx, "<id>")
@@ -1125,17 +1125,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.ResumeSubscription(ctx, "<id>", components.DtoResumeSubscriptionRequest{
@@ -1183,16 +1183,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.GetSubscriptionV2(ctx, "<id>", nil)
@@ -1238,16 +1238,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.ListAllSubscriptionSchedules(ctx, nil, nil, nil, nil)
@@ -1293,16 +1293,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.GetSubscriptionSchedule(ctx, "<id>")
@@ -1345,16 +1345,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.CancelSubscriptionSchedule(ctx, "<id>", nil)
@@ -1398,16 +1398,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Subscriptions.ListSubscriptionSchedules(ctx, "<id>")

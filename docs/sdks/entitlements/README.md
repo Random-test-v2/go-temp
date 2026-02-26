@@ -25,16 +25,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Entitlements.GetAddonEntitlements(ctx, "<id>")
@@ -79,17 +79,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Entitlements.CreateEntitlement(ctx, components.DtoCreateEntitlementRequest{
@@ -137,17 +137,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Entitlements.CreateEntitlementsBulk(ctx, components.DtoCreateBulkEntitlementRequest{
@@ -199,17 +199,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Entitlements.QueryEntitlement(ctx, components.TypesEntitlementFilter{})
@@ -254,16 +254,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Entitlements.GetEntitlement(ctx, "<id>")
@@ -308,17 +308,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Entitlements.UpdateEntitlement(ctx, "<id>", components.DtoUpdateEntitlementRequest{})
@@ -364,16 +364,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Entitlements.DeleteEntitlement(ctx, "<id>")
@@ -418,16 +418,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Entitlements.GetPlanEntitlements(ctx, "<id>")

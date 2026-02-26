@@ -3,8 +3,8 @@
 package operations
 
 import (
-	"github.com/flexprice/flexprice-go/internal/utils"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined/internal/utils"
+	"undefined/models/components"
 )
 
 type QueryUserResponse struct {

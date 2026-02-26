@@ -22,17 +22,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/operations"
+	"undefined"
+	"undefined/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.TaxRates.GetTaxRates(ctx, operations.GetTaxRatesRequest{})
@@ -77,17 +77,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.TaxRates.CreateTaxRate(ctx, components.DtoCreateTaxRateRequest{
@@ -135,16 +135,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.TaxRates.GetTaxRate(ctx, "<id>")
@@ -189,17 +189,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.TaxRates.UpdateTaxRate(ctx, "<id>", components.DtoUpdateTaxRateRequest{})
@@ -245,16 +245,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.TaxRates.DeleteTaxRate(ctx, "<id>")

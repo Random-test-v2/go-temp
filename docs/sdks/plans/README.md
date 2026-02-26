@@ -9,6 +9,7 @@
 * [GetPlan](#getplan) - Get plan
 * [UpdatePlan](#updateplan) - Update plan
 * [DeletePlan](#deleteplan) - Delete plan
+* [PostPlansIDClone](#postplansidclone) - Clone a plan
 * [SyncPlanPrices](#syncplanprices) - Synchronize plan prices
 
 ## CreatePlan
@@ -23,17 +24,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Plans.CreatePlan(ctx, components.DtoCreatePlanRequest{
@@ -80,17 +81,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Plans.QueryPlan(ctx, components.TypesPlanFilter{})
@@ -135,16 +136,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Plans.GetPlan(ctx, "<id>")
@@ -189,17 +190,17 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined"
+	"undefined/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Plans.UpdatePlan(ctx, "<id>", components.DtoUpdatePlanRequest{})
@@ -245,16 +246,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Plans.DeletePlan(ctx, "<id>")
@@ -287,6 +288,62 @@ func main() {
 | apierrors.ErrorsErrorResponse | 500                           | application/json              |
 | apierrors.APIError            | 4XX, 5XX                      | \*/\*                         |
 
+## PostPlansIDClone
+
+Clone an existing plan, copying its active prices, published entitlements, and published credit grants
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="post_/plans/{id}/clone" method="post" path="/plans/{id}/clone" -->
+```go
+package main
+
+import(
+	"context"
+	"undefined"
+	"undefined/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := undefined.New(
+        "https://api.example.com",
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Plans.PostPlansIDClone(ctx, "<id>", components.DtoClonePlanRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.DtoPlanResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
+| `id`                                                                             | *string*                                                                         | :heavy_check_mark:                                                               | Source Plan ID                                                                   |
+| `body`                                                                           | [components.DtoClonePlanRequest](../../models/components/dtocloneplanrequest.md) | :heavy_check_mark:                                                               | Clone configuration                                                              |
+| `opts`                                                                           | [][operations.Option](../../models/operations/option.md)                         | :heavy_minus_sign:                                                               | The options for this request.                                                    |
+
+### Response
+
+**[*operations.PostPlansIDCloneResponse](../../models/operations/postplansidcloneresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| apierrors.ErrorsErrorResponse | 400, 404, 409                 | application/json              |
+| apierrors.ErrorsErrorResponse | 500                           | application/json              |
+| apierrors.APIError            | 4XX, 5XX                      | \*/\*                         |
+
 ## SyncPlanPrices
 
 Use when you have changed plan prices and need to push them to all active subscriptions (e.g. global price update). Returns workflow ID.
@@ -299,16 +356,16 @@ package main
 
 import(
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
+	"undefined"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := flexprice.New(
+    s := undefined.New(
         "https://api.example.com",
-        flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+        undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     res, err := s.Plans.SyncPlanPrices(ctx, "<id>")

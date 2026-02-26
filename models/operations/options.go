@@ -4,9 +4,9 @@ package operations
 
 import (
 	"errors"
-	"github.com/flexprice/flexprice-go/internal/utils"
-	"github.com/flexprice/flexprice-go/retry"
 	"time"
+	"undefined/internal/utils"
+	"undefined/retry"
 )
 
 var ErrUnsupportedOption = errors.New("unsupported option")

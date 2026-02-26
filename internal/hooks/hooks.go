@@ -5,8 +5,8 @@ package hooks
 import (
 	"context"
 	"errors"
-	"github.com/flexprice/flexprice-go/internal/config"
 	"net/http"
+	"undefined/internal/config"
 )
 
 type FailEarly struct {

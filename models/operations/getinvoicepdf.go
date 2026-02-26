@@ -3,8 +3,8 @@
 package operations
 
 import (
-	"github.com/flexprice/flexprice-go/models/components"
 	"io"
+	"undefined/models/components"
 )
 
 type GetInvoicePdfRequest struct {

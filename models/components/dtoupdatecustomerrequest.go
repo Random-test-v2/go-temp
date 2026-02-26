@@ -3,7 +3,7 @@
 package components
 
 import (
-	"github.com/flexprice/flexprice-go/internal/utils"
+	"undefined/internal/utils"
 )
 
 // DtoUpdateCustomerRequest - Request object for updating an existing customer. All fields are optional - only provided fields will be updated

@@ -3,7 +3,7 @@
 package components
 
 import (
-	"github.com/flexprice/flexprice-go/internal/utils"
+	"undefined/internal/utils"
 )
 
 // DtoSubscriptionChangeRequest - Request object for changing a subscription plan (upgrade/downgrade)

@@ -3,7 +3,7 @@
 package components
 
 import (
-	"github.com/flexprice/flexprice-go/internal/utils"
+	"undefined/internal/utils"
 )
 
 type DtoAddAddonToSubscriptionRequest struct {

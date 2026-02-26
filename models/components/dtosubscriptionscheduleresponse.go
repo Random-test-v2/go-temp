@@ -3,7 +3,7 @@
 package components
 
 import (
-	"github.com/flexprice/flexprice-go/internal/utils"
+	"undefined/internal/utils"
 )
 
 // Configuration - configuration contains type-specific configuration (e.g., target_plan_id for plan changes)

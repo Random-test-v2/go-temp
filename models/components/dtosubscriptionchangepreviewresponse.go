@@ -3,7 +3,7 @@
 package components
 
 import (
-	"github.com/flexprice/flexprice-go/internal/utils"
+	"undefined/internal/utils"
 )
 
 // DtoSubscriptionChangePreviewResponse - Response showing the financial impact of a subscription plan change

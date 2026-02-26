@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/flexprice/flexprice-go/models/components"
+	"undefined/models/components"
 )
 
 type DeleteEntityIntegrationMappingRequest struct {

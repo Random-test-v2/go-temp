@@ -4,17 +4,17 @@ package main
 
 import (
 	"context"
-	flexprice "github.com/flexprice/flexprice-go"
-	"github.com/flexprice/flexprice-go/models/components"
 	"log"
+	"undefined"
+	"undefined/models/components"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := flexprice.New(
+	s := undefined.New(
 		"https://api.example.com",
-		flexprice.WithSecurity("<YOUR_API_KEY_HERE>"),
+		undefined.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	res, err := s.Addons.CreateAddon(ctx, components.DtoCreateAddonRequest{
