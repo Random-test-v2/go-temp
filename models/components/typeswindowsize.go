@@ -5,6 +5,7 @@ package components
 type TypesWindowSize string
 
 const (
+	TypesWindowSizeMonth      TypesWindowSize = "MONTH"
 	TypesWindowSizeMinute     TypesWindowSize = "MINUTE"
 	TypesWindowSizeFifteenMin TypesWindowSize = "15MIN"
 	TypesWindowSizeThirtyMin  TypesWindowSize = "30MIN"
@@ -14,7 +15,6 @@ const (
 	TypesWindowSizeTwelveHour TypesWindowSize = "12HOUR"
 	TypesWindowSizeDay        TypesWindowSize = "DAY"
 	TypesWindowSizeWeek       TypesWindowSize = "WEEK"
-	TypesWindowSizeMonth      TypesWindowSize = "MONTH"
 )
 
 func (e TypesWindowSize) ToPointer() *TypesWindowSize {
@@ -25,7 +25,7 @@ func (e TypesWindowSize) ToPointer() *TypesWindowSize {
 func (e *TypesWindowSize) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "MINUTE", "15MIN", "30MIN", "HOUR", "3HOUR", "6HOUR", "12HOUR", "DAY", "WEEK", "MONTH":
+		case "MONTH", "MINUTE", "15MIN", "30MIN", "HOUR", "3HOUR", "6HOUR", "12HOUR", "DAY", "WEEK":
 			return true
 		}
 	}
